@@ -1,5 +1,5 @@
 #!/bin/sh
 
-ln -sf .vimrc ~/.vimrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
 exit 0
