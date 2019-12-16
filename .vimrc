@@ -43,7 +43,7 @@ set cindent         " Auto indent for C language
 
 " Invisible character setting
 set list
-set listchars=trail:~,nbsp:$
+set listchars=tab:>-,trail:~,nbsp:$
 highlight ExtraWhitespace ctermfg=red ctermbg=red guifg=red guibg=red
 match ExtraWhiteSpace / \+$/
 
@@ -67,4 +67,5 @@ inoremap (<tab> ()<Left>
 inoremap <<tab> <><Left>
 inoremap "<tab> ""<Left>
 inoremap '<tab> ''<Left>
+inoremap `<tab> ``<Left>
 inoremap /*<tab> /*  */<Left><Left><Left>
