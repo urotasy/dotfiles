@@ -10,6 +10,7 @@ if filereadable(expand('~/.vim/colors/PaperColor.vim'))
 else
     colorscheme pablo
 endif
+set t_ut=
 syntax on
 
 " Appearance setting
