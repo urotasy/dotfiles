@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# install vim colorscheme
+# install vim colorscheme: PaperColor
 if [ ! -d ${HOME}/.vim ]; then
     mkdir ${HOME}/.vim
 fi
