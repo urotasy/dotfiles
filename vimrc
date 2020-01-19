@@ -40,7 +40,8 @@ set tabstop=4       " Show tab character with this width
 set softtabstop=4   " The width of inputted tab
 set shiftwidth=4    " The width of auto inserted tab
 set shiftround      " round indent to multiple of shiftwidth
-set cindent         " Auto indent for C language
+set autoindent      " Autoindent: keep indent as deep as previous line
+set smartindent     " Smartindent: deeper indent after the line with '{' end
 
 " Invisible character setting
 set list
