@@ -42,6 +42,7 @@ set shiftwidth=4    " The width of auto inserted tab
 set shiftround      " round indent to multiple of shiftwidth
 set autoindent      " Autoindent: keep indent as deep as previous line
 set smartindent     " Smartindent: deeper indent after the line with '{' end
+autocmd FileType c,cpp setlocal cindent
 
 " Invisible character setting
 set list
