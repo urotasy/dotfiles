@@ -72,3 +72,9 @@ inoremap "<tab> ""<Left>
 inoremap '<tab> ''<Left>
 inoremap `<tab> ``<Left>
 inoremap /*<tab> /*  */<Left><Left><Left>
+
+" Enable plugin
+if ( v:version >= 801 )
+    packadd termdebug
+    let g:termdebug_wide = 1
+endif
