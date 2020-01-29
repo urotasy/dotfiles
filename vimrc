@@ -3,6 +3,9 @@ set encoding=utf-8      " The character encoding used inside Vim
 set fileencoding=utf-8  " The character encoding for the file of this buffer
 scriptencoding utf-8    " Specify the character encoding used in the script
 
+" Sound
+set belloff=all
+
 " Backspace
 set backspace=2 " Allow backspace to delete indent, eol and start place of insert
 
