@@ -60,6 +60,10 @@ match ExtraWhiteSpace / \+$/
 set wildmenu
 set wildmode=longest:full
 
+" Split window
+set splitbelow
+set splitright
+
 " Moving in normal mode
 noremap j gj
 noremap k gk
