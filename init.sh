@@ -11,7 +11,7 @@ if [ ! -d ${HOME}/.vim/colors/papercolor ]; then
     mkdir ${HOME}/.vim/colors/papercolor
 fi
 
-git clone https://github.com/NLKNguyen/papercolor-theme.git ${HOME}/.vim/colors/papercolor
+git clone --depth 1 https://github.com/NLKNguyen/papercolor-theme.git ${HOME}/.vim/colors/papercolor
 if [ $? -ne 0 ]; then
     echo "ERROR: failed to git clone PaperColor theme"
     exit 1
