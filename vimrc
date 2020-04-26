@@ -48,7 +48,6 @@ set shiftwidth=4    " The width of auto inserted tab
 set shiftround      " round indent to multiple of shiftwidth
 set autoindent      " Autoindent: keep indent as deep as previous line
 set smartindent     " Smartindent: deeper indent after the line with '{' end
-autocmd FileType c,cpp setlocal cindent
 
 " Invisible character setting
 set list
@@ -59,6 +58,8 @@ match ExtraWhiteSpace / \+$/
 " File name completion in commandline mode
 set wildmenu
 set wildmode=longest:full
+set suffixes=.bak,~,.swp,       " Specify lower priority extention
+set wildignore=~,*.o,*.do,*.swp " Ignore these extention
 
 " Split window
 set splitbelow
@@ -69,6 +70,9 @@ noremap j gj
 noremap k gk
 noremap <Down> gj
 noremap <Up> gk
+
+" Normal mode commands
+nnoremap _s :%s//gc<Left><Left><Left>
 
 " Complement parenthesis and quotation
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
@@ -82,6 +86,32 @@ inoremap "<tab> ""<Left>
 inoremap '<tab> ''<Left>
 inoremap `<tab> ``<Left>
 inoremap /*<tab> /*  */<Left><Left><Left>
+
+" Setting of each programming language
+if has("autocmd")
+  " For C/C++ programs
+  augroup cprog
+    autocmd!
+    autocmd FileType c,cpp setlocal formatoptions=tcroqn2vl
+    autocmd FileType c,cpp setlocal cindent
+  augroup END
+
+  " For Ruby programs
+  augroup rubyprog
+    autocmd!
+    autocmd FileType ruby setlocal tabstop=2
+    autocmd FileType ruby setlocal softtabstop=2
+    autocmd FileType ruby setlocal shiftwidth=2
+  augroup END
+
+  " For Vim script
+  augroup vimscript
+    autocmd!
+    autocmd FileType vim setlocal tabstop=2
+    autocmd FileType vim setlocal softtabstop=2
+    autocmd FileType vim setlocal shiftwidth=2
+  augroup END
+endif " has("autocmd")
 
 " Enable plugin
 if ( v:version >= 801 )
