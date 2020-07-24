@@ -16,14 +16,14 @@ if filereadable(expand('~/.vim/colors/PaperColor.vim'))
 else
     colorscheme pablo
 endif
-set t_ut=
+"set t_ut=
 syntax on
 
 " Appearance setting
 set number      " Show line number
 set cursorline  " Emphasize current line
 set showmatch   " Emphasize correspond parenthesis
-set wrap        " Wrap line
+set nowrap      " Don't wrap line
 
 " Search setting
 set hlsearch    " Highlight search result
