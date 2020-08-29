@@ -17,6 +17,7 @@ else
     colorscheme pablo
 endif
 "set t_ut=
+set t_u7= " Avoid start with replace mode in WSL
 syntax on
 
 " Appearance setting
